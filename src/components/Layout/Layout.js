@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../Aux';
+import Aux from '../Base';
 import './Layout.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 
