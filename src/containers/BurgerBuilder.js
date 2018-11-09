@@ -111,15 +111,6 @@ class BurgerBuilder extends Component{
         return (
             <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
-                    {/* <h3>Your Order</h3>
-                    <p>Your delicious burger has the following ingredients:</p>
-                    <ul>
-                        {ingredientSummary}
-                    </ul>
-                    <button className="Button Danger" onClick={this.purchaseCancelHandler}>CANCEL</button>
-                    <button className="Button Success" onClick={this.purchaseContinueHandler}>CONTINUE</button> */}
-                    {/* <p>Continue to checkout</p> */}
-                    
                     <OrderSummary  
                         ingredients={this.state.ingredients}
                         canceled={this.purchaseCancelHandler}
