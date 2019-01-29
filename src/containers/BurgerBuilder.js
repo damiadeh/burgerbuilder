@@ -93,27 +93,37 @@ class BurgerBuilder extends Component{
 
     purchaseContinueHandler = () => {
         //alert("Payment Page!!");
-        this.setState({loading: true});
-         const order = {
-             ingredients : this.state.ingredients,
-             price: this.state.totalPrice,
-             customer: {
-                 name: 'Adepoju Damilare',
-                 address: {
-                     street: '13, Yaba, Lagos',
-                     country: 'Nigeria'
-                 },
-                 email: 'dami@mail.com',
-                 phone: '08012345678'
-             },
-             deliveryMethod: 'Ship'
-         }
-        axios.post('/orders.json', order).then(response => {
-            this.setState({loading: false, purchasing: false});
-        })
-            .catch(error => {
-                this.setState({loading: false, purchasing: false});
-            });
+        // this.setState({loading: true});
+        //  const order = {
+        //      ingredients : this.state.ingredients,
+        //      price: this.state.totalPrice,
+        //      customer: {
+        //          name: 'Adepoju Damilare',
+        //          address: {
+        //              street: '13, Yaba, Lagos',
+        //              country: 'Nigeria'
+        //          },
+        //          email: 'dami@mail.com',
+        //          phone: '08012345678'
+        //      },
+        //      deliveryMethod: 'Ship'
+        //  }
+        // axios.post('/orders.json', order).then(response => {
+        //     this.setState({loading: false, purchasing: false});
+        // })
+        //     .catch(error => {
+        //         this.setState({loading: false, purchasing: false});
+        //     });
+        const queryParams = [];
+        for(let i in this.state.ingredients) {
+            queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]))
+        }
+        const queryString = queryParams.join('&');
+        this.props.history.push({
+            pathname: '/checkout',
+            //to pass the built burger data to the checkout page
+            search: '?' + queryString
+        });
     }
 
     render() {
