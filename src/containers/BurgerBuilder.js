@@ -7,6 +7,8 @@ import Modal from '../components/Modal/Modal';
 import OrderSummary from '../components/Burger/OrderSummary';
 import axios from '../axios-orders';
 import Spinner from '../components/UI/Spinner/Spinner';
+import withErrorHandler from '../helpers/withErrorHandler';
+
 
 const INGREDIENT_PRICES  = {
     salad : 100,
