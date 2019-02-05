@@ -2,7 +2,7 @@
   "name": "burgerbuilder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://damiadeh.github.io/burgerbuilder/",
+  "homepage": "https://damiadeh.github.io/damiburger/",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^2.0.1",
