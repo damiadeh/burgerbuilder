@@ -1,7 +1,7 @@
 {
   "main.css": "/damiburger/static/css/main.15e3d377.chunk.css",
-  "main.js": "/damiburger/static/js/main.3eb7253b.chunk.js",
-  "main.js.map": "/damiburger/static/js/main.3eb7253b.chunk.js.map",
+  "main.js": "/damiburger/static/js/main.9bd3c811.chunk.js",
+  "main.js.map": "/damiburger/static/js/main.9bd3c811.chunk.js.map",
   "static/js/1.c5cfc76d.chunk.js": "/damiburger/static/js/1.c5cfc76d.chunk.js",
   "static/js/1.c5cfc76d.chunk.js.map": "/damiburger/static/js/1.c5cfc76d.chunk.js.map",
   "runtime~main.js": "/damiburger/static/js/runtime~main.2a9455ae.js",
@@ -9,6 +9,6 @@
   "static/media/chef-burger.jpg": "/damiburger/static/media/chef-burger.54235b09.jpg",
   "static/css/main.15e3d377.chunk.css.map": "/damiburger/static/css/main.15e3d377.chunk.css.map",
   "index.html": "/damiburger/index.html",
-  "precache-manifest.742025c1004dff00b2e8a9f8c66a4694.js": "/damiburger/precache-manifest.742025c1004dff00b2e8a9f8c66a4694.js",
+  "precache-manifest.e217a42d6f9980ef917767af5d396c9f.js": "/damiburger/precache-manifest.e217a42d6f9980ef917767af5d396c9f.js",
   "service-worker.js": "/damiburger/service-worker.js"
 }
