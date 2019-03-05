@@ -87,13 +87,12 @@ class ContactData extends Component {
                         {value: 'cheapest', displayValue: 'Cheapest'}
                     ]
                 },
-                value: '',
+                value: 'fastest',
                 validation: {},
                 valid: true
             },
         },
         formIsValid: false,
-        loading: false
     }
 
     orderHandler = (event) => {
@@ -107,6 +106,7 @@ class ContactData extends Component {
              price: this.props.tPrice,
              orderData: formData
          }
+         //console.log(order);
        this.props.onOrderBurger(order);
     }
 
@@ -189,16 +189,16 @@ class ContactData extends Component {
 
 const mapStateToProps = state =>{
     return {
-        ings : state.ingredients,
-        price : state.tPrice,
-        //loading: loading
+        ings : state.burgerBuilder.ingredients,
+        tPrice : state.burgerBuilder.totalPrice,
+        loading: state.order.loading
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return{
-        onOrderBurger: (orderData) => dispatch(orderActions.purchaseBurgerStart(orderData))
-    }
+        onOrderBurger: (order) => dispatch(orderActions.purchaseBurger(order))
+    };
 };
 
-export default connect(mapStateToProps)(ContactData);
+export default connect(mapStateToProps, mapDispatchToProps)(ContactData);

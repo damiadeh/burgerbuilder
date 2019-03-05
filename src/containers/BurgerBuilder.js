@@ -9,7 +9,7 @@ import OrderSummary from '../components/Burger/OrderSummary';
 import axios from '../axios-base';
 import Spinner from '../components/UI/Spinner/Spinner';
 import withErrorHandler from '../helpers/withErrorHandler';
-import * as burgerBuilderActions from '../store/actions/index';
+import * as actions from '../store/actions/index';
 
 
 class BurgerBuilder extends Component{
@@ -45,37 +45,7 @@ class BurgerBuilder extends Component{
             }, 0);
             return sum > 0;
     }
-    //sum is sum of all ingredients
-    //el is individual element
-    // addIngredientHandler = (type) => {
-    //     const oldCount = this.props.ings[type];
-    //     const updatedCount = oldCount + 1;
-    //     const updatedIngredients = {
-    //         ...this.props.ings
-    //     };
-    //     updatedIngredients[type] = updatedCount;
-    //     const priceAddition = INGREDIENT_PRICES[type];
-    //     const oldPrice = this.state.totalPrice;
-    //     const newPrice = oldPrice + priceAddition;
-    //     this.setState({totalPrice: newPrice,     //     this.updatePurchaseState(updatedIngredients);
-    // }
-
-    // removeIngredientHandler = (type) => {
-    //     const oldCount = this.props.ings[type];
-    //     if(oldCount <= 0) {
-    //         return;
-    //     }
-    //     const updatedCount = oldCount - 1;
-    //     const updatedIngredients = {
-    //         ...this.state.ingredients
-    //     };
-    //     updatedIngredients[type] = updatedCount;
-    //     const priceSubtraction = INGREDIENT_PRICES[type];
-    //     const oldPrice = this.state.totalPrice;
-    //     const newPrice = oldPrice - priceSubtraction;
-    //     this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
-    //     this.updatePurchaseState(updatedIngredients);
-    // }
+  
 
     purchaseHandler = () => { 
         this.setState({purchasing: true});
@@ -86,6 +56,7 @@ class BurgerBuilder extends Component{
     }
 
     purchaseContinueHandler = () => {
+        this.props.onInitPurchase();
         this.props.history.push('/checkout');
     }
 
@@ -150,9 +121,9 @@ class BurgerBuilder extends Component{
 
 const mapStateToProps = state => {
     return {
-        ings: state.ingredients,
-        tPrice: state.totalPrice,
-        error: state.error,
+        ings: state.burgerBuilder.ingredients,
+        tPrice: state.burgerBuilder.totalPrice,
+        error: state.burgerBuilder.error,
     }
 }
 
@@ -160,9 +131,10 @@ const mapDispatchToProps = dispatch => {
     return{
         //onIngredientAdded: choice name
         //type is what you have in your reducer ingredientNmae also
-        onIngredientAdded: (ingName) => dispatch(burgerBuilderActions.addIngredient(ingName)),
-        onIngredientRemoved: (ingName) => dispatch(burgerBuilderActions.removeIngredient(ingName)),
-        onInitIngredients: () => dispatch(burgerBuilderActions.initIngredients())
+        onIngredientAdded: (ingName) => dispatch(actions.addIngredient(ingName)),
+        onIngredientRemoved: (ingName) => dispatch(actions.removeIngredient(ingName)),
+        onInitIngredients: () => dispatch(actions.initIngredients()),
+        onInitPurchase: () => dispatch(actions.purchaseInit())
     }
 }
 
