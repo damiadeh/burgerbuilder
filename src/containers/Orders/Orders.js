@@ -1,27 +1,32 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Order from '../../components/Order/Order';
 import axios from '../../axios-base';
 import withErrorHandler from '../../helpers/withErrorHandler';
 //import order from '../../components/Order/Order';
 import * as actions from '../../store/actions/index';
+import {Redirect} from 'react-router-dom';
 import Spinner from '../../components/UI/Spinner/Spinner';
-
+import Modal from '../../components/Modal/Modal';
+import {NavLink} from 'react-router-dom';
+import Link from '../../components/Navigation/NavigationItems/NavigationItem';
 
 class Orders extends Component{
     
     componentDidMount(){
-        this.props.onFetchOrders();
+        this.props.onFetchOrders(this.props.token);
     }
     render() {
         let orders = <Spinner />;
-        if (!this.props.loading) {
+        if (!this.props.loading ) {
             orders = this.props.orders.map(order => (
                         <Order key={order.id} ingredients={order.ingredients} price={+order.price} />
                     ))
-        };
+        }
+        
         return (
-            <div>
+            <div> 
+                <Modal show={this.props.error}>You need to log in first. <NavLink exact to="/auth">Login Here</NavLink> </Modal>
                 {orders}
             </div>
         );
@@ -31,13 +36,15 @@ class Orders extends Component{
 const mapStateToProps = state => {
     return {
         orders: state.order.orders,
-        loading: state.order.loading
+        loading: state.order.loading,
+        token: state.auth.token,
+        error: state.order.error
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
-        onFetchOrders: () => dispatch(actions.fetchOrders())
+        onFetchOrders: (token) => dispatch(actions.fetchOrders(token))
     };
 }
 
