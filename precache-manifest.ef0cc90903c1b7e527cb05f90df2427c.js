@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/damiburger/static/js/runtime~main.2a9455ae.js"
   },
   {
-    "revision": "5ad944d8dd330f9be03b",
-    "url": "/damiburger/static/js/main.5ad944d8.chunk.js"
+    "revision": "108532dff3273d59c19c",
+    "url": "/damiburger/static/js/main.108532df.chunk.js"
   },
   {
-    "revision": "7ad9621dcd57ed083aef",
-    "url": "/damiburger/static/js/1.7ad9621d.chunk.js"
+    "revision": "c783a0c43354327f907a",
+    "url": "/damiburger/static/js/1.c783a0c4.chunk.js"
   },
   {
-    "revision": "5ad944d8dd330f9be03b",
+    "revision": "108532dff3273d59c19c",
     "url": "/damiburger/static/css/main.500b6df1.chunk.css"
   },
   {
-    "revision": "b77570ecc638b18969cc21742ff2f16a",
+    "revision": "f685766b11833a895a4ed31db7d8b9c1",
     "url": "/damiburger/index.html"
   }
 ];
