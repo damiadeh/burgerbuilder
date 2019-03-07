@@ -5,7 +5,6 @@ import axios from '../../axios-base';
 import withErrorHandler from '../../helpers/withErrorHandler';
 //import order from '../../components/Order/Order';
 import * as actions from '../../store/actions/index';
-import {Redirect} from 'react-router-dom';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/Modal/Modal';
 import {NavLink} from 'react-router-dom';
