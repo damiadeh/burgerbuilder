@@ -1,14 +1,14 @@
 {
-  "main.css": "/damirger/static/css/main.b1bc8324.chunk.css",
-  "main.js": "/damirger/static/js/main.9d180b4e.chunk.js",
-  "main.js.map": "/damirger/static/js/main.9d180b4e.chunk.js.map",
-  "static/js/1.87202aeb.chunk.js": "/damirger/static/js/1.87202aeb.chunk.js",
-  "static/js/1.87202aeb.chunk.js.map": "/damirger/static/js/1.87202aeb.chunk.js.map",
-  "runtime~main.js": "/damirger/static/js/runtime~main.250e5ac8.js",
-  "runtime~main.js.map": "/damirger/static/js/runtime~main.250e5ac8.js.map",
-  "static/media/chef-burger.jpg": "/damirger/static/media/chef-burger.54235b09.jpg",
-  "static/css/main.b1bc8324.chunk.css.map": "/damirger/static/css/main.b1bc8324.chunk.css.map",
-  "index.html": "/damirger/index.html",
-  "precache-manifest.622e2031ccde2f7ce1f0b8d5150fa344.js": "/damirger/precache-manifest.622e2031ccde2f7ce1f0b8d5150fa344.js",
-  "service-worker.js": "/damirger/service-worker.js"
+  "main.css": "/damiburger/static/css/main.b1bc8324.chunk.css",
+  "main.js": "/damiburger/static/js/main.d18430f1.chunk.js",
+  "main.js.map": "/damiburger/static/js/main.d18430f1.chunk.js.map",
+  "static/js/1.87202aeb.chunk.js": "/damiburger/static/js/1.87202aeb.chunk.js",
+  "static/js/1.87202aeb.chunk.js.map": "/damiburger/static/js/1.87202aeb.chunk.js.map",
+  "runtime~main.js": "/damiburger/static/js/runtime~main.2a9455ae.js",
+  "runtime~main.js.map": "/damiburger/static/js/runtime~main.2a9455ae.js.map",
+  "static/media/chef-burger.jpg": "/damiburger/static/media/chef-burger.54235b09.jpg",
+  "static/css/main.b1bc8324.chunk.css.map": "/damiburger/static/css/main.b1bc8324.chunk.css.map",
+  "index.html": "/damiburger/index.html",
+  "precache-manifest.f660135919c7917d9b8e65783ca17632.js": "/damiburger/precache-manifest.f660135919c7917d9b8e65783ca17632.js",
+  "service-worker.js": "/damiburger/service-worker.js"
 }
